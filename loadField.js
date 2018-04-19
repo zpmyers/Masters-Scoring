@@ -1,13 +1,13 @@
 var teams = [
     {
-        'teamName': "ARNdrea's ARMY",
+        'teamName': "Andrea's Team",
 	'owner': 'Andrea',
-	'player1': 'Jordan Spieth',
-	'player2': 'Justin Rose',
-	'player3': 'Rory McIlroy',
-	'player4': 'Adam Scott',
-	'alt1': 'Dustin Johnson',
-	'alt2': 'Matt Kuchar',
+	'player1': 'Sergio Garcia',
+	'player2': 'Dustin Johnson',
+	'player3': 'Matt Kuchar',
+	'player4': 'Jon Rahm',
+	'alt1': 'Justin Rose',
+	'alt2': 'Bubba Watson',
 	'thurScore': '0',
 	'friScore': '0',
 	'satScore': '0',
@@ -15,14 +15,14 @@ var teams = [
 	'totalScore': '0'
     },
     {
-	'teamName': "Jon's Young List",
+	'teamName': "Jon's Team",
 	'owner': 'Jon',
-	'player1': 'Jason Day',
-        'player2': 'Jordan Spieth',
-        'player3': 'Rory McIlroy',
-        'player4': 'Rickie Fowler',
-        'alt1': 'Adam Scott',
-        'alt2': 'Hideki Matsuyama',
+	'player1': 'Phil Mickelson',
+        'player2': 'Bubba Watson',
+        'player3': 'Jason Day',
+        'player4': 'Jordan Spieth',
+        'alt1': 'Rory McIlroy',
+        'alt2': 'Rickie Fowler',
         'thurScore': '0',
         'friScore': '0',
         'satScore': '0',
@@ -30,60 +30,28 @@ var teams = [
         'totalScore': '0'
     },
     {
-        'teamName': "Jamie's Wildcard",
-        'owner': 'Jamie',
-        'player1': 'Sean O&#39;Hair',
-        'player2': 'Brandt Snedeker',
-        'player3': 'Patrick Reed',
+	'teamName': "Pat's Team",
+	'owner': 'Pat',
+	'player1': 'Justin Thomas',
+        'player2': 'Phil Mickelson',
+        'player3': 'Bubba Watson',
         'player4': 'Dustin Johnson',
-        'alt1': 'William McGirt',
-        'alt2': 'Rickie Fowler',
+        'alt1': 'Justin Rose',
+        'alt2': 'Jason Day',
         'thurScore': '0',
         'friScore': '0',
         'satScore': '0',
         'sunScore': '0',
         'totalScore': '0'
-
     },
     {
-        'teamName': "Steve's Selects",
-        'owner': 'Steve',
-        'player1': 'Dustin Johnson',
-        'player2': 'Jordan Spieth',
-        'player3': 'Rory McIlroy',
-        'player4': 'Jon Rahm',
-        'alt1': 'Phil Mickelson',
-        'alt2': 'Rickie Fowler',
-        'thurScore': '0',
-        'friScore': '0',
-        'satScore': '0',
-        'sunScore': '0',
-        'totalScore': '0'
-
-    },
-    {
-	'teamName': "Sue's Master Plan",
-        'owner': 'Sue',
-        'player1': 'Justin Rose',
-        'player2': 'Jordan Spieth',
+        'teamName': "Jamie's Team",
+        'owner': 'Jamie',
+        'player1': 'Patrick Reed',
+        'player2': 'Jason Day',
         'player3': 'Dustin Johnson',
-        'player4': 'Bubba Watson',
-        'alt1': 'Jon Rahm',
-        'alt2': 'Louis Oosthuizen',
-        'thurScore': '0',
-        'friScore': '0',
-        'satScore': '0',
-        'sunScore': '0',
-        'totalScore': '0'
-    },
-    {
-        'teamName': "Zach's Grateful Red",
-        'owner': 'Zach',
-        'player1': 'Dustin Johnson',
-        'player2': 'Jordan Spieth',
-        'player3': 'Sergio Garcia',
-        'player4': 'Rickie Fowler',
-        'alt1': 'Jon Rahm',
+        'player4': 'Henrik Stenson',
+        'alt1': 'Jason Dufner',
         'alt2': 'Phil Mickelson',
         'thurScore': '0',
         'friScore': '0',
@@ -93,14 +61,76 @@ var teams = [
 
     },
     {
-        'teamName': "Ben's Going to UW",
+        'teamName': "Steve's Team",
+        'owner': 'Steve',
+        'player1': 'Jordan Spieth',
+        'player2': 'Rory McIlroy',
+        'player3': 'Dustin Johnson',
+        'player4': 'Justin Thomas',
+        'alt1': 'Tiger Woods',
+        'alt2': 'Justin Rose',
+        'thurScore': '0',
+        'friScore': '0',
+        'satScore': '0',
+        'sunScore': '0',
+        'totalScore': '0'
+
+    },
+    {
+	'teamName': "Deb's Team",
+	'owner': 'Deb',
+	'player1': 'Jordan Spieth',
+        'player2': 'Justin Thomas',
+        'player3': 'Rory McIlroy',
+        'player4': 'Dustin Johnson',
+        'alt1': 'Bubba Watson',
+        'alt2': 'Justin Rose',
+        'thurScore': '0',
+        'friScore': '0',
+        'satScore': '0',
+        'sunScore': '0',
+        'totalScore': '0'
+    },
+    {
+	'teamName': "Sue's Team",
+        'owner': 'Sue',
+        'player1': 'Tiger Woods',
+        'player2': 'Rory McIlroy',
+        'player3': 'Matt Kuchar',
+        'player4': 'Jordan Spieth',
+        'alt1': 'Bubba Watson',
+        'alt2': 'Paul Casey',
+        'thurScore': '0',
+        'friScore': '0',
+        'satScore': '0',
+        'sunScore': '0',
+        'totalScore': '0'
+    },
+    {
+        'teamName': "Zach's Team",
+        'owner': 'Zach',
+        'player1': 'Justin Thomas',
+        'player2': 'Rickie Fowler',
+        'player3': 'Dustin Johnson',
+        'player4': 'Tiger Woods',
+        'alt1': 'Phil Mickelson',
+        'alt2': 'Bubba Watson',
+        'thurScore': '0',
+        'friScore': '0',
+        'satScore': '0',
+        'sunScore': '0',
+        'totalScore': '0'
+
+    },
+    {
+        'teamName': "Ben's Team",
         'owner': 'Ben',
         'player1': 'Jordan Spieth',
-        'player2': 'Rickie Fowler',
-        'player3': 'Rory McIlroy',
-        'player4': 'Jason Day',
-        'alt1': 'Dustin Johnson',
-        'alt2': 'Phil Mickelson',
+        'player2': 'Tiger Woods',
+        'player3': 'Phil Mickelson',
+        'player4': 'Justin Rose',
+        'alt1': 'Rickie Fowler',
+        'alt2': 'Dustin Johnson',
         'thurScore': '0',
         'friScore': '0',
         'satScore': '0',
@@ -109,14 +139,29 @@ var teams = [
 
     },
     {
-        'teamName': "Jack's Attack",
+	'teamName': "Charlie's Team",
+	'owner': 'Charlie',
+	'player1': 'Rickie Fowler',
+        'player2': 'Justin Rose',
+        'player3': 'Phil Mickelson',
+        'player4': 'Jordan Spieth',
+        'alt1': 'Jason Day',
+        'alt2': 'Dustin Johnson',
+        'thurScore': '0',
+        'friScore': '0',
+        'satScore': '0',
+        'sunScore': '0',
+        'totalScore': '0'
+    },
+    {
+        'teamName': "Jack's Team",
         'owner': 'Jack',
-        'player1': 'Phil Mickelson',
-        'player2': 'Rory McIlroy',
-        'player3': 'Bubba Watson',
-        'player4': 'Patrick Reed',
-        'alt1': 'Jordan Spieth',
-        'alt2': 'Sergio Garcia',
+        'player1': 'Jordan Spieth',
+        'player2': 'Justin Rose',
+        'player3': 'Rory McIlroy',
+        'player4': 'Dustin Johnson',
+        'alt1': 'Rickie Fowler',
+        'alt2': 'Jon Rahm',
         'thurScore': '0',
         'friScore': '0',
         'satScore': '0',
@@ -399,7 +444,7 @@ function calculateScore() {
               satCount++;
             }
           }
-          if (satCount < 4) {
+          if (satCount < 4 && teams[teamIndex].satScore != 0) {
 	    var cur = Number(teams[teamIndex].satScore);
             cur += 78;
             teams[teamIndex].satScore = cur;
@@ -456,6 +501,6 @@ calculateScore();
 buildScoreBoard("#leaderboard");
 $(document).ready(function() { 
     // call the tablesorter plugin, the magic happens in the markup 
-    $("#leaderTable").tablesorter({sortlist:[[3,0]]}); 
+    //$("#leaderTable").tablesorter({sortlist:[[3,0]]}); 
 }); 
 //console.log(players);

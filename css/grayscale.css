@@ -1,6 +1,6 @@
 /*!
- * Start Bootstrap - Grayscale v3.3.7+1 (http://startbootstrap.com/template-overviews/grayscale)
- * Copyright 2013-2016 Start Bootstrap
+ * Start Bootstrap - Grayscale v3.3.7+1 (masters.ddns.net)
+ * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
@@ -38,7 +38,6 @@ p {
     line-height: 1.6;
   }
 }
-
 a {
   color: #42DCA3;
   -webkit-transition: all 0.2s ease-in-out;
@@ -114,7 +113,7 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: #263;
+    background: black;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 }
@@ -232,7 +231,62 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-
+#map {
+  width: 100%;
+  height: 200px;
+  margin-top: 100px;
+}
+@media (min-width: 767px) {
+  .content-section {
+    padding-top: 250px;
+  }
+  .download-section {
+    padding: 100px 0;
+  }
+  #map {
+    height: 400px;
+    margin-top: 250px;
+  }
+}
+.btn {
+  text-transform: uppercase;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: 0;
+}
+.btn-default {
+  border: 1px solid #42DCA3;
+  color: #42DCA3;
+  background-color: transparent;
+}
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid #42DCA3;
+  outline: none;
+  color: black;
+  background-color: #42DCA3;
+}
+ul.banner-social-buttons {
+  margin-top: 0;
+}
+@media (max-width: 1199px) {
+  ul.banner-social-buttons {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 767px) {
+  ul.banner-social-buttons li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  ul.banner-social-buttons li:last-child {
+    margin-bottom: 0;
+  }
+}
 footer {
   padding: 50px 0;
 }

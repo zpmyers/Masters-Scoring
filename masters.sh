@@ -2,12 +2,13 @@
 
 URL="http://www.espn.com/golf/leaderboard"
 
-if [ -e "playersStats.js" ]
-then 
-    sudo rm playersStats.js
+if [ -e "/var/www/scritps/playersStats.js" ]
+then
+    echo "Deleteing File..."	
+    sudo rm -f /var/www/scripts/playersStats.js
 fi
-sudo touch playersStats.js
-sudo echo "var players = " >> playersStats.js
+sudo touch /var/www/scripts/playersStats.js
+sudo echo "var players = " >> /var/www/scripts/playersStats.js
 curl -Ss "$URL" | \
         pup '.leaderboard-table tbody tr.player-overview json{}' | \
         jq '[.[] | {
@@ -23,4 +24,4 @@ curl -Ss "$URL" | \
                 TOT: .children[10].text,
 #                 start: .children[1].text,
 #                 ctry: .children[2].children[0].src
-        }]' >> playersStats.js
+        }]' >> /var/www/scripts/playersStats.js

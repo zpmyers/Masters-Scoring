@@ -21,7 +21,7 @@ gulp.task('less', function() {
     return gulp.src('less/grayscale.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('/var/www/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -32,7 +32,7 @@ gulp.task('minify-css', ['less'], function() {
     return gulp.src('css/grayscale.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('css'))
+        .pipe(gulp.dest('/var/www/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -44,7 +44,7 @@ gulp.task('minify-js', function() {
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest('/var/www/js'))
         .pipe(browserSync.reload({
             stream: true
         }))
@@ -53,10 +53,10 @@ gulp.task('minify-js', function() {
 // Copy vendor libraries from /node_modules into /vendor
 gulp.task('copy', function() {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
-        .pipe(gulp.dest('vendor/bootstrap'))
+        .pipe(gulp.dest('/var/www/vendor/bootstrap'))
 
     gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-        .pipe(gulp.dest('vendor/jquery'))
+        .pipe(gulp.dest('/var/www/vendor/jquery'))
 
     gulp.src([
             'node_modules/font-awesome/**',
@@ -66,7 +66,11 @@ gulp.task('copy', function() {
             '!node_modules/font-awesome/*.md',
             '!node_modules/font-awesome/*.json'
         ])
-        .pipe(gulp.dest('vendor/font-awesome'))
+        .pipe(gulp.dest('/var/www/vendor/font-awesome'))
+
+    gulp.src('./index.html').pipe(gulp.dest('/var/www/'));
+    gulp.src('./loadField.js').pipe(gulp.dest('/var/www/scripts'));
+    gulp.src('./img/**').pipe(gulp.dest('/var/www/img'));
 })
 
 // Run everything
@@ -80,6 +84,8 @@ gulp.task('browserSync', function() {
         },
     })
 })
+
+gulp.task('serve', ['browserSync','default']);
 
 // Dev task with browserSync
 gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
